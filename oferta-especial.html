@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es-419">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oferta Especial — 50% de Descuento | Yeso Lucrativo</title>
+    <meta name="description" content="Oferta exclusiva por tiempo limitado. Método Yeso Lucrativo con 50% de descuento.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: #3d2b1f;
+            background-color: #fdf6ef;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        img { max-width: 100%; display: block; object-fit: cover; }
+
+        .page-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 2rem 1rem 4rem;
+            min-height: 100vh;
+        }
+
+        .offer-card {
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1.5px solid #e0ccb8;
+            box-shadow: 0 20px 60px rgba(107, 76, 59, 0.12);
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            padding-bottom: 0;
+        }
+
+        .badge-top {
+            background: linear-gradient(135deg, #c87941, #a85e2a);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0.45rem 1.4rem;
+            border-radius: 50px;
+            margin-top: 1.6rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            box-shadow: 0 4px 14px rgba(200, 121, 65, 0.35);
+        }
+
+        .timer-section { padding: 1.2rem 2rem 0; }
+
+        .timer-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #9a7060;
+            margin-bottom: 0.6rem;
+        }
+
+        .timer-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+        }
+
+        .timer-block {
+            background: #c87941;
+            color: #fff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.9rem;
+            font-weight: 700;
+            border-radius: 10px;
+            width: 62px;
+            height: 62px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+
+        .timer-block span.unit {
+            font-family: 'Lato', sans-serif;
+            font-size: 0.55rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            opacity: 0.85;
+            margin-top: 2px;
+        }
+
+        .timer-separator {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #c87941;
+            margin-bottom: 8px;
+        }
+
+        .offer-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: #3d2b1f;
+            line-height: 1.25;
+            padding: 1.4rem 1.8rem 0;
+        }
+
+        .offer-headline .percent { color: #5a9e4e; }
+
+        .offer-subtitle-text {
+            font-size: 0.92rem;
+            color: #7a5a4a;
+            line-height: 1.55;
+            padding: 0.8rem 1.8rem 0;
+        }
+
+        .offer-subtitle-text .bold-pink {
+            font-weight: 700;
+            color: #a85e2a;
+        }
+
+        .trust-line {
+            font-size: 0.82rem;
+            color: #c87941;
+            font-weight: 600;
+            padding: 0.6rem 1.8rem 0;
+            line-height: 1.45;
+        }
+
+        .trust-line strong { color: #a85e2a; }
+
+        .warning-line {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #a85e2a;
+            padding: 0.5rem 1.8rem 0;
+        }
+
+        .divider {
+            width: calc(100% - 3.6rem);
+            height: 1px;
+            background: #e0ccb8;
+            margin: 1.2rem 1.8rem;
+        }
+
+        .features-section { width: 100%; padding: 0 1.4rem; }
+
+        .features-title {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            color: #c87941;
+            margin-bottom: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+        }
+
+        .feature-item {
+            background: #f5ede0;
+            border: 1.5px solid #e0ccb8;
+            border-radius: 12px;
+            padding: 0.9rem 0.7rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .feature-icon { font-size: 1.3rem; }
+
+        .feature-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #6b4c3b;
+            line-height: 1.3;
+        }
+
+        .price-section { padding: 1.5rem 1.8rem 0; width: 100%; }
+
+        .old-price {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #9a7060;
+            text-decoration: line-through;
+            opacity: 0.7;
+            margin-bottom: 0.1rem;
+        }
+
+        .new-price-label {
+            font-size: 0.85rem;
+            color: #7a5a4a;
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+        }
+
+        .new-price {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.4rem;
+            font-weight: 700;
+            color: #3d2b1f;
+            line-height: 1;
+            letter-spacing: 1px;
+        }
+
+        .new-price .currency {
+            font-size: 1.5rem;
+            font-weight: 600;
+            vertical-align: middle;
+            opacity: 0.7;
+        }
+
+        .savings-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: #f0fde7;
+            border: 1.5px solid #7ee04c;
+            color: #3a7a1a;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 0.35rem 0.9rem;
+            border-radius: 50px;
+            margin-top: 0.7rem;
+        }
+
+        .cta-wrapper { padding: 1.4rem 1.6rem; width: 100%; }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, #7ee04c, #6ed040);
+            color: #1e3d0c;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            padding: 1.15rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(126, 224, 76, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulse-btn 2.5s infinite;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(126, 224, 76, 0.55);
+            animation: none;
+        }
+
+        @keyframes pulse-btn {
+            0%, 100% { box-shadow: 0 8px 25px rgba(126, 224, 76, 0.4); }
+            50% { box-shadow: 0 8px 35px rgba(126, 224, 76, 0.65); transform: scale(1.01); }
+        }
+
+        .guarantee-box {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: #f5ede0;
+            border: 1.5px solid #e0ccb8;
+            border-radius: 12px;
+            padding: 0.9rem 1.1rem;
+            margin: 0 1.6rem;
+            text-align: left;
+        }
+
+        .guarantee-icon { font-size: 1.6rem; flex-shrink: 0; }
+
+        .guarantee-text { font-size: 0.78rem; color: #7a5a4a; line-height: 1.45; }
+
+        .guarantee-text strong {
+            font-weight: 700;
+            color: #6b4c3b;
+            display: block;
+            margin-bottom: 0.1rem;
+        }
+
+        .alert-box {
+            background: #fff8e7;
+            border-top: 2px solid #f5c842;
+            padding: 0.9rem 1.4rem;
+            margin-top: 1.4rem;
+            font-size: 0.75rem;
+            color: #7a5c10;
+            line-height: 1.5;
+            width: 100%;
+        }
+
+        .alert-box strong { font-weight: 700; }
+
+        .brand-footer {
+            padding: 1rem 0 0.5rem;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #c87941;
+            opacity: 0.6;
+        }
+
+        .blob {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(70px);
+            z-index: -1;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .blob-pink {
+            top: -5%;
+            left: -10%;
+            width: 340px;
+            height: 340px;
+            background: #e8c9a0;
+        }
+
+        .blob-blue {
+            bottom: -10%;
+            right: -10%;
+            width: 420px;
+            height: 420px;
+            background: #f5ede0;
+        }
+
+        .offer-card { animation: fadeUp 0.5s ease both; }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (min-width: 520px) {
+            .offer-headline { font-size: 2rem; }
+            .new-price { font-size: 3.8rem; }
+            .timer-block { width: 72px; height: 72px; font-size: 2.2rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="blob blob-pink"></div>
+    <div class="blob blob-blue"></div>
+
+    <div class="page-wrapper">
+        <div class="offer-card">
+
+            <div class="badge-top">⚡ Espera — Tenemos Algo Para Ti</div>
+
+            <div class="timer-section">
+                <p class="timer-label">Esta oferta desaparece en:</p>
+                <div class="timer-display">
+                    <div class="timer-block">
+                        <span id="timer-min">14</span>
+                        <span class="unit">min</span>
+                    </div>
+                    <div class="timer-separator">:</div>
+                    <div class="timer-block">
+                        <span id="timer-sec">59</span>
+                        <span class="unit">seg</span>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="offer-headline">
+                No te Vayas Sin Esto: <span class="percent">50% de Descuento</span> Exclusivo Para Ti
+            </h1>
+
+            <p class="offer-subtitle-text">
+                Casi te vas... pero antes de irte, liberamos una oferta que nunca hemos puesto disponible públicamente.<br>
+                El mismo curso completo por exactamente <span class="bold-pink">la mitad del precio</span> — porque creemos que esta habilidad puede cambiar tu vida.
+            </p>
+
+            <p class="trust-line">
+                Ya sabes lo que hace el Método Yeso Lucrativo. Ahora imagina tener todo eso pagando solo la mitad. Esto no volverá a pasar —
+                <strong>es una oportunidad única, solo aquí, solo ahora.</strong>
+            </p>
+
+            <p class="warning-line">⚠️ Si cierras esta página, el descuento desaparece. El precio vuelve a lo normal.</p>
+
+            <div class="divider"></div>
+
+            <div class="price-section">
+                <p class="old-price">De R$ 37,60</p>
+                <p class="new-price-label">Por solo</p>
+                <p class="new-price">
+                    <span class="currency">R$</span> 19,90
+                </p>
+                <div class="savings-badge">
+                    💰 Ahorras R$ 17,70 (51% OFF)
+                </div>
+            </div>
+
+            <div class="cta-wrapper">
+                <a href="https://checkout.gessolucrativo.online/VCCL1O8SCXDB" class="cta-button">
+                    ¡Sí! Quiero el 50% de Descuento Ahora
+                </a>
+            </div>
+
+            <div class="guarantee-box">
+                <div class="guarantee-icon">🛡️</div>
+                <div class="guarantee-text">
+                    <strong>Garantía Sin Riesgo de 7 Días</strong>
+                    Si no quedas satisfecha por cualquier motivo, en cualquier momento durante los 7 primeros días, te devuelvo cada centavo. Ni siquiera necesitas explicar el motivo. El riesgo es todo mío.
+                </div>
+            </div>
+
+            <p class="brand-footer">Yeso Lucrativo</p>
+
+            <div class="alert-box">
+                ⚠️ <strong>ÚLTIMA OPORTUNIDAD:</strong> Si cierras esta página, el 50% de descuento desaparece definitivamente. El precio vuelve a R$37,60 de inmediato. Esta es tu única y última oportunidad.
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var totalSeconds = 14 * 60 + 59;
+            var minEl = document.getElementById('timer-min');
+            var secEl = document.getElementById('timer-sec');
+
+            function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+            var interval = setInterval(function () {
+                if (totalSeconds <= 0) {
+                    clearInterval(interval);
+                    minEl.textContent = '00';
+                    secEl.textContent = '00';
+                    return;
+                }
+                totalSeconds--;
+                var m = Math.floor(totalSeconds / 60);
+                var s = totalSeconds % 60;
+                minEl.textContent = pad(m);
+                secEl.textContent = pad(s);
+            }, 1000);
+        })();
+    </script>
+</body>
+
+</html>
